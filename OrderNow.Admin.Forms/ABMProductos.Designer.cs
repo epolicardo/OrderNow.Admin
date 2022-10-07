@@ -64,11 +64,11 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,20 +86,21 @@
             // 
             // panel2
             // 
+            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(376, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(854, 630);
+            this.panel2.Size = new System.Drawing.Size(921, 630);
             this.panel2.TabIndex = 39;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 11);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 11);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(825, 606);
+            this.dataGridView1.Size = new System.Drawing.Size(901, 606);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox6
@@ -161,7 +162,6 @@
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox14
             // 
@@ -240,7 +240,6 @@
             this.label4.Size = new System.Drawing.Size(30, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "EAN";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label10
             // 
@@ -408,6 +407,23 @@
             this.panel1.Size = new System.Drawing.Size(358, 630);
             this.panel1.TabIndex = 38;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(218, 538);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(55, 15);
+            this.label20.TabIndex = 45;
+            this.label20.Text = "3.564.849";
+            // 
+            // label19
+            // 
+            this.label19.Image = ((System.Drawing.Image)(resources.GetObject("label19.Image")));
+            this.label19.Location = new System.Drawing.Point(149, 538);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 32);
+            this.label19.TabIndex = 42;
+            // 
             // label17
             // 
             this.label17.Image = ((System.Drawing.Image)(resources.GetObject("label17.Image")));
@@ -432,33 +448,17 @@
             this.label2.Size = new System.Drawing.Size(32, 32);
             this.label2.TabIndex = 38;
             // 
-            // label19
-            // 
-            this.label19.Image = ((System.Drawing.Image)(resources.GetObject("label19.Image")));
-            this.label19.Location = new System.Drawing.Point(149, 538);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(32, 32);
-            this.label19.TabIndex = 42;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(218, 538);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 15);
-            this.label20.TabIndex = 45;
-            this.label20.Text = "3.564.849";
-            // 
             // ABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1242, 684);
+            this.ClientSize = new System.Drawing.Size(1310, 684);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "ABMProductos";
             this.Text = "ABMProductos";
+            this.Load += new System.EventHandler(this.ABMProductos_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);

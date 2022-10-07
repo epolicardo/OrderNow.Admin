@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OrderNow.Common">
+      <HintPath>..\..\Practica-Profesionalizante-II\OrderNow\OrderNow.Common\bin\Debug\net6.0\OrderNow.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

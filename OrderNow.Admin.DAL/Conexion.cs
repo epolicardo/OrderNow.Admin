@@ -6,10 +6,10 @@ namespace OrderNow.Admin.DAL
     public class Conexion
     {
         public SqlConnection conexion;
-        public string cadenaconex = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog = OrderNow; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public const string cadenaConexion = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog = OrderNow; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public Conexion()
         {
-            conexion = new SqlConnection(cadenaconex);
+            conexion = new SqlConnection(cadenaConexion);
         }
 
         public void AbrirConexion()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderNow.Admin.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +18,13 @@ namespace OrderNow.Admin.Forms
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void ABMProductos_Load(object sender, EventArgs e)
         {
+            Acciones acciones = new Acciones();
+            DataSet dataSet = acciones.ObtenerTodos("Products");
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            dataGridView1.DataSource = dataSet.Tables[0];
+            dataGridView1.Update();
         }
     }
 }
