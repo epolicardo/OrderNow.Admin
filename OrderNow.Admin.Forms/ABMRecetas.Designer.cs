@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvRecetas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvRecetas
+            // 
+            this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecetas.Location = new System.Drawing.Point(506, 75);
+            this.dgvRecetas.Name = "dgvRecetas";
+            this.dgvRecetas.RowTemplate.Height = 25;
+            this.dgvRecetas.Size = new System.Drawing.Size(471, 520);
+            this.dgvRecetas.TabIndex = 0;
+            // 
+            // ABMRecetas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1039, 735);
+            this.Controls.Add(this.dgvRecetas);
+            this.Name = "ABMRecetas";
             this.Text = "ABMRecetas";
+            this.Load += new System.EventHandler(this.ABMRecetas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DataGridView dgvRecetas;
     }
 }

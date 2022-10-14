@@ -13,6 +13,7 @@
   <ItemGroup>
     <Reference Include="OrderNow.Common">
       <HintPath>..\..\Practica-Profesionalizante-II\OrderNow\OrderNow.Common\bin\Debug\net6.0\OrderNow.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
 

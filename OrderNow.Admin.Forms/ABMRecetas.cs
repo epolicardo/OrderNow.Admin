@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using OrderNow.Admin.DAL;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace OrderNow.Admin.Forms
 {
@@ -15,6 +8,15 @@ namespace OrderNow.Admin.Forms
         public ABMRecetas()
         {
             InitializeComponent();
+        }
+
+        private void ABMRecetas_Load(object sender, EventArgs e)
+        {
+      
+            DataSet dataSet = Conexion.ObtenerTodos("Recipes");
+
+            dgvRecetas.DataSource = dataSet.Tables[0];
+            dgvRecetas.Update();
         }
     }
 }

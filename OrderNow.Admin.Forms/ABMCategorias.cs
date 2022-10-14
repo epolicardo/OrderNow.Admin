@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderNow.Admin.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace OrderNow.Admin.Forms
         public ABMCategorias()
         {
             InitializeComponent();
+        }
+
+        private void ABMCategorias_Load(object sender, EventArgs e)
+        {
+            Acciones acciones = new Acciones();
+            DataSet dataSet = Conexion.ObtenerTodos("Categories");
+
+            dgvCategorias.DataSource = dataSet.Tables[0];
+            dgvCategorias.Update();
+
         }
     }
 }

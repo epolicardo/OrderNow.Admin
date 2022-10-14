@@ -13,6 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="OrderNow.Common">
+      <HintPath>..\..\Practica-Profesionalizante-II\OrderNow\OrderNow.Common\bin\Debug\net6.0\OrderNow.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

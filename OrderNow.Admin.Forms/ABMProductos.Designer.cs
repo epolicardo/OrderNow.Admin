@@ -31,46 +31,46 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMProductos));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtStockActual = new System.Windows.Forms.TextBox();
+            this.txtEAN = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtURLIcono = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtURLImagen = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbxVendible = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbxSugerido = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cbxReceta = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbReceta = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtNombreLegal = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.lblCalificaciones = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,48 +88,52 @@
             // 
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvProductos);
             this.panel2.Location = new System.Drawing.Point(376, 42);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(921, 630);
             this.panel2.TabIndex = 39;
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 11);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 606);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(8, 11);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowTemplate.Height = 25;
+            this.dgvProductos.Size = new System.Drawing.Size(901, 606);
+            this.dgvProductos.TabIndex = 0;
             // 
-            // textBox6
+            // txtDescripcion
             // 
-            this.textBox6.Location = new System.Drawing.Point(13, 203);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(326, 23);
-            this.textBox6.TabIndex = 24;
+            this.txtDescripcion.Location = new System.Drawing.Point(13, 203);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(326, 23);
+            this.txtDescripcion.TabIndex = 24;
+            this.txtDescripcion.Text = "Gaseosa coca cola en lata de aluminio de 354cc edicion regular";
             // 
-            // textBox4
+            // txtNombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(13, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(326, 23);
-            this.textBox4.TabIndex = 22;
+            this.txtNombre.Location = new System.Drawing.Point(13, 83);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(326, 23);
+            this.txtNombre.TabIndex = 22;
+            this.txtNombre.Text = "Coca Cola Lata 354cc regular";
             // 
-            // textBox12
+            // txtStockActual
             // 
-            this.textBox12.Location = new System.Drawing.Point(136, 414);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 23);
-            this.textBox12.TabIndex = 30;
+            this.txtStockActual.Location = new System.Drawing.Point(136, 414);
+            this.txtStockActual.Name = "txtStockActual";
+            this.txtStockActual.Size = new System.Drawing.Size(100, 23);
+            this.txtStockActual.TabIndex = 30;
+            this.txtStockActual.Text = "300";
             // 
-            // textBox3
+            // txtEAN
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 29);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 23);
-            this.textBox3.TabIndex = 21;
+            this.txtEAN.Location = new System.Drawing.Point(136, 29);
+            this.txtEAN.Name = "txtEAN";
+            this.txtEAN.Size = new System.Drawing.Size(149, 23);
+            this.txtEAN.TabIndex = 21;
+            this.txtEAN.Text = "7798788979787655";
             // 
             // btnCancelar
             // 
@@ -140,19 +144,21 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox13
+            // txtPrecio
             // 
-            this.textBox13.Location = new System.Drawing.Point(13, 414);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 23);
-            this.textBox13.TabIndex = 31;
+            this.txtPrecio.Location = new System.Drawing.Point(13, 414);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 23);
+            this.txtPrecio.TabIndex = 31;
+            this.txtPrecio.Text = "1000";
             // 
-            // textBox2
+            // txtCodigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 20;
+            this.txtCodigo.Location = new System.Drawing.Point(13, 29);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 23);
+            this.txtCodigo.TabIndex = 20;
+            this.txtCodigo.Text = "1234";
             // 
             // btnGuardar
             // 
@@ -162,13 +168,15 @@
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // textBox14
+            // txtURLIcono
             // 
-            this.textBox14.Location = new System.Drawing.Point(13, 357);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(314, 23);
-            this.textBox14.TabIndex = 32;
+            this.txtURLIcono.Location = new System.Drawing.Point(13, 357);
+            this.txtURLIcono.Name = "txtURLIcono";
+            this.txtURLIcono.Size = new System.Drawing.Size(314, 23);
+            this.txtURLIcono.TabIndex = 32;
+            this.txtURLIcono.Text = "sfdhjkghfdsafghfgdsa";
             // 
             // label6
             // 
@@ -179,12 +187,13 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Nombre legal";
             // 
-            // textBox15
+            // txtURLImagen
             // 
-            this.textBox15.Location = new System.Drawing.Point(13, 309);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(314, 23);
-            this.textBox15.TabIndex = 33;
+            this.txtURLImagen.Location = new System.Drawing.Point(13, 309);
+            this.txtURLImagen.Name = "txtURLImagen";
+            this.txtURLImagen.Size = new System.Drawing.Size(314, 23);
+            this.txtURLImagen.TabIndex = 33;
+            this.txtURLImagen.Text = "asdfghjkl";
             // 
             // label7
             // 
@@ -213,15 +222,15 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "URL Imagen";
             // 
-            // checkBox1
+            // cbxVendible
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(165, 477);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 19);
-            this.checkBox1.TabIndex = 34;
-            this.checkBox1.Text = "Vendible";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbxVendible.AutoSize = true;
+            this.cbxVendible.Location = new System.Drawing.Point(165, 477);
+            this.cbxVendible.Name = "cbxVendible";
+            this.cbxVendible.Size = new System.Drawing.Size(71, 19);
+            this.cbxVendible.TabIndex = 34;
+            this.cbxVendible.Text = "Vendible";
+            this.cbxVendible.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -250,15 +259,15 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "URL Icon";
             // 
-            // checkBox2
+            // cbxSugerido
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(254, 477);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(73, 19);
-            this.checkBox2.TabIndex = 35;
-            this.checkBox2.Text = "Sugerido";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbxSugerido.AutoSize = true;
+            this.cbxSugerido.Location = new System.Drawing.Point(254, 477);
+            this.cbxSugerido.Name = "cbxSugerido";
+            this.cbxSugerido.Size = new System.Drawing.Size(73, 19);
+            this.cbxSugerido.TabIndex = 35;
+            this.cbxSugerido.Text = "Sugerido";
+            this.cbxSugerido.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -287,15 +296,15 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "Stock actual";
             // 
-            // checkBox3
+            // cbxReceta
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(13, 452);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(97, 19);
-            this.checkBox3.TabIndex = 36;
-            this.checkBox3.Text = "Tiene Receta?";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbxReceta.AutoSize = true;
+            this.cbxReceta.Location = new System.Drawing.Point(13, 452);
+            this.cbxReceta.Name = "cbxReceta";
+            this.cbxReceta.Size = new System.Drawing.Size(97, 19);
+            this.cbxReceta.TabIndex = 36;
+            this.cbxReceta.Text = "Tiene Receta?";
+            this.cbxReceta.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -315,13 +324,13 @@
             this.label14.TabIndex = 17;
             this.label14.Text = "Calificaciones";
             // 
-            // comboBox1
+            // cbReceta
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 477);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 37;
+            this.cbReceta.FormattingEnabled = true;
+            this.cbReceta.Location = new System.Drawing.Point(13, 477);
+            this.cbReceta.Name = "cbReceta";
+            this.cbReceta.Size = new System.Drawing.Size(121, 23);
+            this.cbReceta.TabIndex = 37;
             // 
             // label15
             // 
@@ -332,12 +341,13 @@
             this.label15.TabIndex = 18;
             this.label15.Text = "Categoria";
             // 
-            // textBox5
+            // txtNombreLegal
             // 
-            this.textBox5.Location = new System.Drawing.Point(13, 143);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 23);
-            this.textBox5.TabIndex = 23;
+            this.txtNombreLegal.Location = new System.Drawing.Point(13, 143);
+            this.txtNombreLegal.Name = "txtNombreLegal";
+            this.txtNombreLegal.Size = new System.Drawing.Size(200, 23);
+            this.txtNombreLegal.TabIndex = 23;
+            this.txtNombreLegal.Text = "Coca lata 354cc reg";
             // 
             // label18
             // 
@@ -347,74 +357,76 @@
             this.label18.Size = new System.Drawing.Size(32, 32);
             this.label18.TabIndex = 41;
             // 
-            // comboBox2
+            // cbCategoria
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(13, 254);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 23);
-            this.comboBox2.TabIndex = 43;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(218, 254);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 44;
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Items.AddRange(new object[] {
+            "Gaseosas"});
+            this.cbCategoria.Location = new System.Drawing.Point(13, 254);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(199, 23);
+            this.cbCategoria.TabIndex = 43;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.txtMarca);
+            this.panel1.Controls.Add(this.lblCalificaciones);
+            this.panel1.Controls.Add(this.cbCategoria);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtNombreLegal);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbReceta);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.checkBox3);
+            this.panel1.Controls.Add(this.cbxReceta);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.checkBox2);
+            this.panel1.Controls.Add(this.cbxSugerido);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.cbxVendible);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox15);
+            this.panel1.Controls.Add(this.txtURLImagen);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox14);
+            this.panel1.Controls.Add(this.txtURLIcono);
             this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox13);
+            this.panel1.Controls.Add(this.txtCodigo);
+            this.panel1.Controls.Add(this.txtPrecio);
             this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtEAN);
+            this.panel1.Controls.Add(this.txtStockActual);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.txtDescripcion);
             this.panel1.Location = new System.Drawing.Point(12, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(358, 630);
             this.panel1.TabIndex = 38;
             // 
-            // label20
+            // txtMarca
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(218, 538);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 15);
-            this.label20.TabIndex = 45;
-            this.label20.Text = "3.564.849";
+            this.txtMarca.Location = new System.Drawing.Point(218, 254);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(121, 23);
+            this.txtMarca.TabIndex = 46;
+            this.txtMarca.Text = "Coca Cola";
+            // 
+            // lblCalificaciones
+            // 
+            this.lblCalificaciones.AutoSize = true;
+            this.lblCalificaciones.Location = new System.Drawing.Point(218, 538);
+            this.lblCalificaciones.Name = "lblCalificaciones";
+            this.lblCalificaciones.Size = new System.Drawing.Size(55, 15);
+            this.lblCalificaciones.TabIndex = 45;
+            this.lblCalificaciones.Text = "3.564.849";
             // 
             // label19
             // 
@@ -460,7 +472,7 @@
             this.Text = "ABMProductos";
             this.Load += new System.EventHandler(this.ABMProductos_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -471,43 +483,43 @@
         #endregion
         private Label label1;
         private Panel panel2;
-        private DataGridView dataGridView1;
-        private TextBox textBox6;
-        private TextBox textBox4;
-        private TextBox textBox12;
-        private TextBox textBox3;
+        private DataGridView dgvProductos;
+        private TextBox txtDescripcion;
+        private TextBox txtNombre;
+        private TextBox txtStockActual;
+        private TextBox txtEAN;
         private Button btnCancelar;
-        private TextBox textBox13;
-        private TextBox textBox2;
+        private TextBox txtPrecio;
+        private TextBox txtCodigo;
         private Button btnGuardar;
-        private TextBox textBox14;
+        private TextBox txtURLIcono;
         private Label label6;
-        private TextBox textBox15;
+        private TextBox txtURLImagen;
         private Label label7;
         private Label label5;
         private Label label8;
-        private CheckBox checkBox1;
+        private CheckBox cbxVendible;
         private Label label9;
         private Label label4;
         private Label label10;
-        private CheckBox checkBox2;
+        private CheckBox cbxSugerido;
         private Label label11;
         private Label label3;
         private Label label12;
-        private CheckBox checkBox3;
+        private CheckBox cbxReceta;
         private Label label13;
         private Label label14;
-        private ComboBox comboBox1;
+        private ComboBox cbReceta;
         private Label label15;
-        private TextBox textBox5;
+        private TextBox txtNombreLegal;
         private Label label18;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox cbCategoria;
         private Panel panel1;
-        private Label label20;
+        private Label lblCalificaciones;
         private Label label19;
         private Label label17;
         private Label label16;
         private Label label2;
+        private TextBox txtMarca;
     }
 }
