@@ -9,14 +9,11 @@ using OrderNow.Common.Data.Entities;
 
 namespace OrderNow.Admin.DAL
 {
-    public class Acciones 
+    public static class Acciones 
     {
 
-        public Acciones()
-        {
 
-        }
-     
+
 
         //public Products ObtenerUno(Guid Id, string tipo)
         //{
@@ -51,6 +48,6 @@ namespace OrderNow.Admin.DAL
         //    return ds;
         //}
 
-     
+
     }
 }

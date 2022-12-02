@@ -35,5 +35,12 @@ namespace OrderNow.Admin.Forms
             form.Show(this);
 
         }
+
+        private void relacionarComercioUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelacionarUsuariosComercios form = new();
+            form.Owner = this;
+            form.Show(this);
+        }
     }
 }

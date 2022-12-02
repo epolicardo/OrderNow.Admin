@@ -30,34 +30,40 @@
         {
             this.dgvComercios = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.cbUser = new System.Windows.Forms.ComboBox();
+            this.btnIcon = new System.Windows.Forms.Button();
+            this.btnImage = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtPromoMessage = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtContractUrl = new System.Windows.Forms.TextBox();
+            this.dtpAlta = new System.Windows.Forms.DateTimePicker();
+            this.dtpValidacion = new System.Windows.Forms.DateTimePicker();
+            this.dtpExpira = new System.Windows.Forms.DateTimePicker();
+            this.cbxValidado = new System.Windows.Forms.CheckBox();
+            this.cbxFranquicia = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtPiso = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNro = new System.Windows.Forms.TextBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtCUIT = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtLegalName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -66,11 +72,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.ofdArchivos = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComercios)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,33 +83,46 @@
             // 
             // dgvComercios
             // 
+            this.dgvComercios.AllowUserToAddRows = false;
+            this.dgvComercios.AllowUserToDeleteRows = false;
+            this.dgvComercios.AllowUserToResizeRows = false;
             this.dgvComercios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvComercios.Location = new System.Drawing.Point(12, 433);
+            this.dgvComercios.MultiSelect = false;
             this.dgvComercios.Name = "dgvComercios";
+            this.dgvComercios.ReadOnly = true;
             this.dgvComercios.RowTemplate.Height = 25;
+            this.dgvComercios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvComercios.Size = new System.Drawing.Size(985, 347);
             this.dgvComercios.TabIndex = 0;
+            this.dgvComercios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComercios_CellContentDoubleClick);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.btnNuevo);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.lblUser);
+            this.panel1.Controls.Add(this.cbUser);
+            this.panel1.Controls.Add(this.btnIcon);
+            this.panel1.Controls.Add(this.btnImage);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.dateTimePicker4);
-            this.panel1.Controls.Add(this.dateTimePicker3);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.txtPromoMessage);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtContractUrl);
+            this.panel1.Controls.Add(this.dtpAlta);
+            this.panel1.Controls.Add(this.dtpValidacion);
+            this.panel1.Controls.Add(this.dtpExpira);
+            this.panel1.Controls.Add(this.cbxValidado);
+            this.panel1.Controls.Add(this.cbxFranquicia);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.txtCUIT);
+            this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Controls.Add(this.txtLegalName);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.label12);
@@ -115,35 +131,85 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Location = new System.Drawing.Point(11, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(986, 415);
             this.panel1.TabIndex = 1;
             // 
-            // button6
+            // btnCancelar
             // 
-            this.button6.Location = new System.Drawing.Point(797, 363);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(96, 29);
-            this.button6.TabIndex = 51;
-            this.button6.Text = "Cargar Icono";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Location = new System.Drawing.Point(461, 372);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(154, 33);
+            this.btnCancelar.TabIndex = 57;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // button5
+            // btnNuevo
             // 
-            this.button5.Location = new System.Drawing.Point(797, 182);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(96, 29);
-            this.button5.TabIndex = 50;
-            this.button5.Text = "Cargar Portada";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(461, 333);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(154, 33);
+            this.btnNuevo.TabIndex = 56;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(169, 103);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 15);
+            this.label9.TabIndex = 55;
+            this.label9.Text = "CUIT";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(461, 227);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(126, 15);
+            this.lblUser.TabIndex = 53;
+            this.lblUser.Text = "Usuario Administrador";
+            // 
+            // cbUser
+            // 
+            this.cbUser.Enabled = false;
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Location = new System.Drawing.Point(461, 242);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(196, 23);
+            this.cbUser.TabIndex = 52;
+            // 
+            // btnIcon
+            // 
+            this.btnIcon.Enabled = false;
+            this.btnIcon.Location = new System.Drawing.Point(797, 363);
+            this.btnIcon.Name = "btnIcon";
+            this.btnIcon.Size = new System.Drawing.Size(96, 29);
+            this.btnIcon.TabIndex = 51;
+            this.btnIcon.Text = "Cargar Icono";
+            this.btnIcon.UseVisualStyleBackColor = true;
+            this.btnIcon.Click += new System.EventHandler(this.btnIcon_Click);
+            // 
+            // btnImage
+            // 
+            this.btnImage.Enabled = false;
+            this.btnImage.Location = new System.Drawing.Point(797, 182);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(96, 29);
+            this.btnImage.TabIndex = 50;
+            this.btnImage.Text = "Cargar Portada";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Location = new System.Drawing.Point(797, 217);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(146, 140);
@@ -153,6 +219,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(797, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(146, 140);
@@ -169,80 +236,88 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Domicilio";
             // 
-            // textBox3
+            // txtPromoMessage
             // 
-            this.textBox3.Location = new System.Drawing.Point(461, 245);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(295, 23);
-            this.textBox3.TabIndex = 46;
+            this.txtPromoMessage.Enabled = false;
+            this.txtPromoMessage.Location = new System.Drawing.Point(461, 294);
+            this.txtPromoMessage.Name = "txtPromoMessage";
+            this.txtPromoMessage.Size = new System.Drawing.Size(295, 23);
+            this.txtPromoMessage.TabIndex = 46;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 23);
-            this.textBox2.TabIndex = 45;
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(15, 170);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(296, 23);
+            this.txtEmail.TabIndex = 45;
             // 
-            // textBox1
+            // txtContractUrl
             // 
-            this.textBox1.Location = new System.Drawing.Point(461, 191);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 23);
-            this.textBox1.TabIndex = 44;
+            this.txtContractUrl.Enabled = false;
+            this.txtContractUrl.Location = new System.Drawing.Point(461, 191);
+            this.txtContractUrl.Name = "txtContractUrl";
+            this.txtContractUrl.Size = new System.Drawing.Size(295, 23);
+            this.txtContractUrl.TabIndex = 44;
             // 
-            // dateTimePicker4
+            // dtpAlta
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(461, 21);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(251, 23);
-            this.dateTimePicker4.TabIndex = 43;
+            this.dtpAlta.Enabled = false;
+            this.dtpAlta.Location = new System.Drawing.Point(461, 21);
+            this.dtpAlta.Name = "dtpAlta";
+            this.dtpAlta.Size = new System.Drawing.Size(251, 23);
+            this.dtpAlta.TabIndex = 43;
             // 
-            // dateTimePicker3
+            // dtpValidacion
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(461, 78);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(251, 23);
-            this.dateTimePicker3.TabIndex = 42;
+            this.dtpValidacion.Enabled = false;
+            this.dtpValidacion.Location = new System.Drawing.Point(461, 78);
+            this.dtpValidacion.Name = "dtpValidacion";
+            this.dtpValidacion.Size = new System.Drawing.Size(251, 23);
+            this.dtpValidacion.TabIndex = 42;
             // 
-            // dateTimePicker1
+            // dtpExpira
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(461, 134);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(251, 23);
-            this.dateTimePicker1.TabIndex = 40;
+            this.dtpExpira.Enabled = false;
+            this.dtpExpira.Location = new System.Drawing.Point(461, 134);
+            this.dtpExpira.Name = "dtpExpira";
+            this.dtpExpira.Size = new System.Drawing.Size(251, 23);
+            this.dtpExpira.TabIndex = 40;
             // 
-            // checkBox2
+            // cbxValidado
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(565, 294);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(71, 19);
-            this.checkBox2.TabIndex = 39;
-            this.checkBox2.Text = "Validado";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbxValidado.AutoSize = true;
+            this.cbxValidado.Enabled = false;
+            this.cbxValidado.Location = new System.Drawing.Point(695, 227);
+            this.cbxValidado.Name = "cbxValidado";
+            this.cbxValidado.Size = new System.Drawing.Size(71, 19);
+            this.cbxValidado.TabIndex = 39;
+            this.cbxValidado.Text = "Validado";
+            this.cbxValidado.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cbxFranquicia
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(461, 294);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(81, 19);
-            this.checkBox1.TabIndex = 38;
-            this.checkBox1.Text = "Franquicia";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbxFranquicia.AutoSize = true;
+            this.cbxFranquicia.Enabled = false;
+            this.cbxFranquicia.Location = new System.Drawing.Point(695, 252);
+            this.cbxFranquicia.Name = "cbxFranquicia";
+            this.cbxFranquicia.Size = new System.Drawing.Size(81, 19);
+            this.cbxFranquicia.TabIndex = 38;
+            this.cbxFranquicia.Text = "Franquicia";
+            this.cbxFranquicia.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.txtPiso);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtNro);
+            this.panel2.Controls.Add(this.txtObservaciones);
+            this.panel2.Controls.Add(this.txtLocalidad);
+            this.panel2.Controls.Add(this.txtCalle);
             this.panel2.Location = new System.Drawing.Point(15, 227);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(415, 171);
@@ -257,12 +332,13 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Piso";
             // 
-            // textBox7
+            // txtPiso
             // 
-            this.textBox7.Location = new System.Drawing.Point(17, 85);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 23);
-            this.textBox7.TabIndex = 40;
+            this.txtPiso.Enabled = false;
+            this.txtPiso.Location = new System.Drawing.Point(17, 85);
+            this.txtPiso.Name = "txtPiso";
+            this.txtPiso.Size = new System.Drawing.Size(185, 23);
+            this.txtPiso.TabIndex = 40;
             // 
             // label20
             // 
@@ -300,36 +376,41 @@
             this.label13.TabIndex = 33;
             this.label13.Text = "Calle";
             // 
-            // textBox9
+            // txtNro
             // 
-            this.textBox9.Location = new System.Drawing.Point(219, 36);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 23);
-            this.textBox9.TabIndex = 32;
+            this.txtNro.Enabled = false;
+            this.txtNro.Location = new System.Drawing.Point(219, 36);
+            this.txtNro.Name = "txtNro";
+            this.txtNro.Size = new System.Drawing.Size(185, 23);
+            this.txtNro.TabIndex = 32;
             // 
-            // textBox6
+            // txtObservaciones
             // 
-            this.textBox6.Location = new System.Drawing.Point(17, 133);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(387, 23);
-            this.textBox6.TabIndex = 29;
+            this.txtObservaciones.Enabled = false;
+            this.txtObservaciones.Location = new System.Drawing.Point(17, 133);
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(387, 23);
+            this.txtObservaciones.TabIndex = 29;
             // 
-            // textBox5
+            // txtLocalidad
             // 
-            this.textBox5.Location = new System.Drawing.Point(219, 85);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(185, 23);
-            this.textBox5.TabIndex = 28;
+            this.txtLocalidad.Enabled = false;
+            this.txtLocalidad.Location = new System.Drawing.Point(219, 85);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(185, 23);
+            this.txtLocalidad.TabIndex = 28;
             // 
-            // textBox4
+            // txtCalle
             // 
-            this.textBox4.Location = new System.Drawing.Point(17, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 23);
-            this.textBox4.TabIndex = 27;
+            this.txtCalle.Enabled = false;
+            this.txtCalle.Location = new System.Drawing.Point(17, 36);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(185, 23);
+            this.txtCalle.TabIndex = 27;
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(15, 30);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(296, 23);
@@ -353,20 +434,29 @@
             this.label17.TabIndex = 36;
             this.label17.Text = "Alta";
             // 
-            // textBox8
+            // txtCUIT
             // 
-            this.textBox8.Location = new System.Drawing.Point(15, 121);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 23);
-            this.textBox8.TabIndex = 31;
+            this.txtCUIT.Enabled = false;
+            this.txtCUIT.Location = new System.Drawing.Point(169, 121);
+            this.txtCUIT.Name = "txtCUIT";
+            this.txtCUIT.Size = new System.Drawing.Size(142, 23);
+            this.txtCUIT.TabIndex = 31;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Enabled = false;
+            this.txtPhone.Location = new System.Drawing.Point(15, 121);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(148, 23);
+            this.txtPhone.TabIndex = 31;
             // 
             // txtLegalName
             // 
+            this.txtLegalName.Enabled = false;
             this.txtLegalName.Location = new System.Drawing.Point(15, 74);
             this.txtLegalName.Name = "txtLegalName";
             this.txtLegalName.Size = new System.Drawing.Size(296, 23);
             this.txtLegalName.TabIndex = 28;
-            this.txtLegalName.Text = "Nombre Legal";
             // 
             // lblName
             // 
@@ -407,7 +497,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(461, 227);
+            this.label6.Location = new System.Drawing.Point(461, 274);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 15);
             this.label6.TabIndex = 14;
@@ -431,50 +521,27 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "URL de Contrato";
             // 
-            // button4
+            // btnGuardar
             // 
-            this.button4.Location = new System.Drawing.Point(528, 346);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.Location = new System.Drawing.Point(621, 333);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(155, 33);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // button3
+            // ofdArchivos
             // 
-            this.button3.Location = new System.Drawing.Point(447, 346);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(447, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(528, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.ofdArchivos.DefaultExt = "*.jpg";
+            this.ofdArchivos.FileName = "openFileDialog1";
             // 
             // ABMComercios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(1019, 792);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvComercios);
@@ -497,38 +564,34 @@
         private DataGridView dgvComercios;
         private Panel panel1;
         private Label label1;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private Button button6;
-        private Button button5;
+        private Button btnGuardar;
+        private Button btnIcon;
+        private Button btnImage;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label label2;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private DateTimePicker dateTimePicker4;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private TextBox txtEmail;
+        private TextBox txtContractUrl;
+        private DateTimePicker dtpAlta;
+        private DateTimePicker dtpValidacion;
+        private DateTimePicker dtpExpira;
+        private CheckBox cbxValidado;
+        private CheckBox cbxFranquicia;
         private Panel panel2;
         private Label label3;
-        private TextBox textBox7;
+        private TextBox txtPiso;
         private Label label20;
         private Label label19;
         private Label label15;
         private Label label13;
-        private TextBox textBox9;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
+        private TextBox txtNro;
+        private TextBox txtObservaciones;
+        private TextBox txtLocalidad;
+        private TextBox txtCalle;
         private TextBox txtName;
         private Label label16;
         private Label label17;
-        private TextBox textBox8;
+        private TextBox txtPhone;
         private TextBox txtLegalName;
         private Label lblName;
         private Label label12;
@@ -536,6 +599,13 @@
         private Label label7;
         private Label label6;
         private Label label5;
-        private OpenFileDialog openFileDialog1;
+        private OpenFileDialog ofdArchivos;
+        private TextBox txtCUIT;
+        private Label lblUser;
+        private ComboBox cbUser;
+        private TextBox txtPromoMessage;
+        private Label label9;
+        private Button btnNuevo;
+        private Button btnCancelar;
     }
 }

@@ -7,12 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="FakesAssemblies\**" />
+    <EmbeddedResource Remove="FakesAssemblies\**" />
+    <None Remove="FakesAssemblies\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalDesignTimeBuildInput Remove="FakesAssemblies\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="OrderNow.Common">
-      <HintPath>..\..\Practica-Profesionalizante-II\OrderNow\OrderNow.Common\bin\Debug\net6.0\OrderNow.Common.dll</HintPath>
+      <HintPath>..\..\Practica-Profesionalizante-II\OrderNow\OrderNow.Blazor\bin\Debug\net6.0\OrderNow.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

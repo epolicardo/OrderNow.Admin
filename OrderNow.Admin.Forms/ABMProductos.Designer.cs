@@ -63,12 +63,16 @@
             this.label18 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cbComercios = new System.Windows.Forms.ComboBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.lblCalificaciones = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbUsuarios = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,6 +90,9 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.dgvProductos);
@@ -96,12 +103,16 @@
             // 
             // dgvProductos
             // 
+            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(8, 11);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowTemplate.Height = 25;
             this.dgvProductos.Size = new System.Drawing.Size(901, 606);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProductos_CellMouseDoubleClick);
             // 
             // txtDescripcion
             // 
@@ -109,7 +120,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(326, 23);
             this.txtDescripcion.TabIndex = 24;
-            this.txtDescripcion.Text = "Gaseosa coca cola en lata de aluminio de 354cc edicion regular";
+            this.txtDescripcion.Text = "Masa de pizza grande circular";
             // 
             // txtNombre
             // 
@@ -117,15 +128,15 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(326, 23);
             this.txtNombre.TabIndex = 22;
-            this.txtNombre.Text = "Coca Cola Lata 354cc regular";
+            this.txtNombre.Text = "Masa base de pizza grande";
             // 
             // txtStockActual
             // 
-            this.txtStockActual.Location = new System.Drawing.Point(136, 414);
+            this.txtStockActual.Location = new System.Drawing.Point(140, 477);
             this.txtStockActual.Name = "txtStockActual";
-            this.txtStockActual.Size = new System.Drawing.Size(100, 23);
+            this.txtStockActual.Size = new System.Drawing.Size(70, 23);
             this.txtStockActual.TabIndex = 30;
-            this.txtStockActual.Text = "300";
+            this.txtStockActual.Text = "100";
             // 
             // txtEAN
             // 
@@ -133,7 +144,7 @@
             this.txtEAN.Name = "txtEAN";
             this.txtEAN.Size = new System.Drawing.Size(149, 23);
             this.txtEAN.TabIndex = 21;
-            this.txtEAN.Text = "7798788979787655";
+            this.txtEAN.Text = "0001";
             // 
             // btnCancelar
             // 
@@ -146,11 +157,11 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(13, 414);
+            this.txtPrecio.Location = new System.Drawing.Point(216, 477);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 23);
+            this.txtPrecio.Size = new System.Drawing.Size(61, 23);
             this.txtPrecio.TabIndex = 31;
-            this.txtPrecio.Text = "1000";
+            this.txtPrecio.Text = "200";
             // 
             // txtCodigo
             // 
@@ -158,7 +169,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 23);
             this.txtCodigo.TabIndex = 20;
-            this.txtCodigo.Text = "1234";
+            this.txtCodigo.Text = "0001";
             // 
             // btnGuardar
             // 
@@ -225,7 +236,7 @@
             // cbxVendible
             // 
             this.cbxVendible.AutoSize = true;
-            this.cbxVendible.Location = new System.Drawing.Point(165, 477);
+            this.cbxVendible.Location = new System.Drawing.Point(268, 556);
             this.cbxVendible.Name = "cbxVendible";
             this.cbxVendible.Size = new System.Drawing.Size(71, 19);
             this.cbxVendible.TabIndex = 34;
@@ -262,7 +273,7 @@
             // cbxSugerido
             // 
             this.cbxSugerido.AutoSize = true;
-            this.cbxSugerido.Location = new System.Drawing.Point(254, 477);
+            this.cbxSugerido.Location = new System.Drawing.Point(268, 532);
             this.cbxSugerido.Name = "cbxSugerido";
             this.cbxSugerido.Size = new System.Drawing.Size(73, 19);
             this.cbxSugerido.TabIndex = 35;
@@ -272,7 +283,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 396);
+            this.label11.Location = new System.Drawing.Point(218, 456);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(40, 15);
             this.label11.TabIndex = 14;
@@ -290,7 +301,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(136, 396);
+            this.label12.Location = new System.Drawing.Point(141, 453);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 15);
             this.label12.TabIndex = 15;
@@ -327,6 +338,8 @@
             // cbReceta
             // 
             this.cbReceta.FormattingEnabled = true;
+            this.cbReceta.Items.AddRange(new object[] {
+            "Selecione..."});
             this.cbReceta.Location = new System.Drawing.Point(13, 477);
             this.cbReceta.Name = "cbReceta";
             this.cbReceta.Size = new System.Drawing.Size(121, 23);
@@ -347,7 +360,8 @@
             this.txtNombreLegal.Name = "txtNombreLegal";
             this.txtNombreLegal.Size = new System.Drawing.Size(200, 23);
             this.txtNombreLegal.TabIndex = 23;
-            this.txtNombreLegal.Text = "Coca lata 354cc reg";
+            this.txtNombreLegal.Text = "Masa pizza gde";
+            this.txtNombreLegal.TextChanged += new System.EventHandler(this.txtNombreLegal_TextChanged);
             // 
             // label18
             // 
@@ -370,6 +384,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.cbComercios);
             this.panel1.Controls.Add(this.txtMarca);
             this.panel1.Controls.Add(this.lblCalificaciones);
             this.panel1.Controls.Add(this.cbCategoria);
@@ -411,18 +427,35 @@
             this.panel1.Size = new System.Drawing.Size(358, 630);
             this.panel1.TabIndex = 38;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(13, 390);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 15);
+            this.label20.TabIndex = 48;
+            this.label20.Text = "Comercio";
+            // 
+            // cbComercios
+            // 
+            this.cbComercios.FormattingEnabled = true;
+            this.cbComercios.Location = new System.Drawing.Point(13, 408);
+            this.cbComercios.Name = "cbComercios";
+            this.cbComercios.Size = new System.Drawing.Size(314, 23);
+            this.cbComercios.TabIndex = 47;
+            // 
             // txtMarca
             // 
             this.txtMarca.Location = new System.Drawing.Point(218, 254);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(121, 23);
             this.txtMarca.TabIndex = 46;
-            this.txtMarca.Text = "Coca Cola";
+            this.txtMarca.Text = "Popular";
             // 
             // lblCalificaciones
             // 
             this.lblCalificaciones.AutoSize = true;
-            this.lblCalificaciones.Location = new System.Drawing.Point(218, 538);
+            this.lblCalificaciones.Location = new System.Drawing.Point(79, 514);
             this.lblCalificaciones.Name = "lblCalificaciones";
             this.lblCalificaciones.Size = new System.Drawing.Size(55, 15);
             this.lblCalificaciones.TabIndex = 45;
@@ -460,11 +493,31 @@
             this.label2.Size = new System.Drawing.Size(32, 32);
             this.label2.TabIndex = 38;
             // 
+            // cbUsuarios
+            // 
+            this.cbUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbUsuarios.FormattingEnabled = true;
+            this.cbUsuarios.Location = new System.Drawing.Point(1012, 13);
+            this.cbUsuarios.Name = "cbUsuarios";
+            this.cbUsuarios.Size = new System.Drawing.Size(285, 23);
+            this.cbUsuarios.TabIndex = 40;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(959, 16);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 15);
+            this.label21.TabIndex = 41;
+            this.label21.Text = "Usuario";
+            // 
             // ABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1310, 684);
+            this.ClientSize = new System.Drawing.Size(1310, 688);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.cbUsuarios);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -521,5 +574,9 @@
         private Label label16;
         private Label label2;
         private TextBox txtMarca;
+        private Label label20;
+        private ComboBox cbComercios;
+        private ComboBox cbUsuarios;
+        private Label label21;
     }
 }

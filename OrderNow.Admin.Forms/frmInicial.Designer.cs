@@ -33,12 +33,14 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sugeridosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmABMRecetas = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comerciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMComerciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relacionarComercioUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.comerciosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1590, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +68,8 @@
             // 
             this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aBMProductosToolStripMenuItem,
-            this.stockToolStripMenuItem});
+            this.stockToolStripMenuItem,
+            this.sugeridosToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
@@ -74,15 +77,23 @@
             // aBMProductosToolStripMenuItem
             // 
             this.aBMProductosToolStripMenuItem.Name = "aBMProductosToolStripMenuItem";
-            this.aBMProductosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.aBMProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aBMProductosToolStripMenuItem.Text = "ABM Productos";
             this.aBMProductosToolStripMenuItem.Click += new System.EventHandler(this.ABMProductosToolStripMenuItem_Click);
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Visible = false;
+            // 
+            // sugeridosToolStripMenuItem
+            // 
+            this.sugeridosToolStripMenuItem.Name = "sugeridosToolStripMenuItem";
+            this.sugeridosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sugeridosToolStripMenuItem.Text = "Sugeridos";
+            this.sugeridosToolStripMenuItem.Visible = false;
             // 
             // recetasToolStripMenuItem
             // 
@@ -110,14 +121,15 @@
             // aBMCategoriasToolStripMenuItem
             // 
             this.aBMCategoriasToolStripMenuItem.Name = "aBMCategoriasToolStripMenuItem";
-            this.aBMCategoriasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.aBMCategoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aBMCategoriasToolStripMenuItem.Text = "ABM Categorias";
             this.aBMCategoriasToolStripMenuItem.Click += new System.EventHandler(this.ABMCategoriasToolStripMenuItem_Click);
             // 
             // comerciosToolStripMenuItem
             // 
             this.comerciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMComerciosToolStripMenuItem});
+            this.aBMComerciosToolStripMenuItem,
+            this.relacionarComercioUsuarioToolStripMenuItem});
             this.comerciosToolStripMenuItem.Name = "comerciosToolStripMenuItem";
             this.comerciosToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.comerciosToolStripMenuItem.Text = "Comercios";
@@ -125,15 +137,22 @@
             // aBMComerciosToolStripMenuItem
             // 
             this.aBMComerciosToolStripMenuItem.Name = "aBMComerciosToolStripMenuItem";
-            this.aBMComerciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aBMComerciosToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.aBMComerciosToolStripMenuItem.Text = "ABM Comercios";
             this.aBMComerciosToolStripMenuItem.Click += new System.EventHandler(this.ABMComerciosToolStripMenuItem_Click);
+            // 
+            // relacionarComercioUsuarioToolStripMenuItem
+            // 
+            this.relacionarComercioUsuarioToolStripMenuItem.Name = "relacionarComercioUsuarioToolStripMenuItem";
+            this.relacionarComercioUsuarioToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.relacionarComercioUsuarioToolStripMenuItem.Text = "Relacionar Comercio-Usuario";
+            this.relacionarComercioUsuarioToolStripMenuItem.Click += new System.EventHandler(this.relacionarComercioUsuarioToolStripMenuItem_Click);
             // 
             // frmInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1590, 936);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -159,5 +178,7 @@
         private ToolStripMenuItem aBMCategoriasToolStripMenuItem;
         private ToolStripMenuItem comerciosToolStripMenuItem;
         private ToolStripMenuItem aBMComerciosToolStripMenuItem;
+        private ToolStripMenuItem sugeridosToolStripMenuItem;
+        private ToolStripMenuItem relacionarComercioUsuarioToolStripMenuItem;
     }
 }

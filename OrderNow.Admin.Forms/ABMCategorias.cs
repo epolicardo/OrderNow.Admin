@@ -20,12 +20,13 @@ namespace OrderNow.Admin.Forms
 
         private void ABMCategorias_Load(object sender, EventArgs e)
         {
-            Acciones acciones = new Acciones();
+         
             DataSet dataSet = Conexion.ObtenerTodos("Categories");
 
             dgvCategorias.DataSource = dataSet.Tables[0];
             dgvCategorias.Update();
 
         }
+
     }
 }

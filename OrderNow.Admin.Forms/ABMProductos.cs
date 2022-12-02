@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
 
 namespace OrderNow.Admin.Forms
 {
@@ -23,43 +24,50 @@ namespace OrderNow.Admin.Forms
 
         private void ABMProductos_Load(object sender, EventArgs e)
         {
+
             DataSet dataSet = Conexion.ObtenerTodos("Products");
+            if (dataSet.Tables.Count > 0)
+            {
 
-            dgvProductos.DataSource = dataSet.Tables[0];
-            dgvProductos.Update();
+                dgvProductos.DataSource = dataSet.Tables[0];
+                dgvProductos.Update();
+            }
 
-            ActualizarCombos();
+            ActualizarCombos(cbCategoria, "Categories", "Id", "Name");
+            ActualizarCombos(cbComercios, "Businesses", "Id", "Name");
+            ActualizarCombos(cbReceta, "Recipes", "Id", "Name");
+            ActualizarCombos(cbUsuarios, "AspNetUsers", "Id", "Email");
         }
 
-        private void ActualizarCombos()
+        private void ActualizarCombos(ComboBox comboBox, string Tabla, string value, string display)
         {
-          
-            DataSet dsCategorias = Conexion.ObtenerTodos("Categories");
-            DataTable dtCategorias = dsCategorias.Tables[0];
 
-            cbCategoria.DisplayMember = "Name";
-            cbCategoria.ValueMember = "Id";
-            cbCategoria.DataSource = dtCategorias;
-            cbCategoria.Update();
+            DataSet ds = Conexion.ObtenerTodos(Tabla);
+            DataTable dataTable = ds.Tables[0];
+
+            comboBox.DisplayMember = display;
+            comboBox.ValueMember = value;
+            comboBox.DataSource = dataTable;
+            comboBox.Update();
+            comboBox.SelectedIndex = -1;
 
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Businesses businesses = new();
+            Categories categories = new();
 
-            Categories categories = new Categories();
-            categories.Name = cbCategoria.Text;
-            categories.Id = Guid.Parse("269c886d-325f-4865-9cc4-34449aa3f56b");
+            if (cbCategoria.SelectedIndex != -1)
+                categories.Id = Guid.Parse(cbCategoria.SelectedValue.ToString());
+            else
+                MessageBox.Show("Debe seleccionar una categoria para continuar");
 
-            Businesses businesses = new Businesses
-            {
-                Id = Guid.Parse("269c886d-325f-4865-9cc4-34449aa3f56a"),
-                ContractURL = "askldjasldkj"
-            };
-
-            Recipes recipes = new Recipes();
-            recipes.Id = Guid.Parse("ec4f7031-bdf7-47a5-9548-5b1514962960");
+            if (cbComercios.SelectedIndex != -1)
+                businesses.Id = Guid.Parse(cbComercios.SelectedValue.ToString());
+            else
+                MessageBox.Show("Debe seleccionar un comercio para continuar");
 
             Products producto = new Products
             {
@@ -70,8 +78,6 @@ namespace OrderNow.Admin.Forms
                 Name = txtNombre.Text,
                 LegalName = txtNombreLegal.Text,
                 Brand = txtMarca.Text,
-                Category = categories,
-                HasRecipe = cbxReceta.Checked,
                 IsSelleable = cbxVendible.Checked,
                 IsSuggested = cbxSugerido.Checked,
                 Created = DateTime.Now,
@@ -79,23 +85,76 @@ namespace OrderNow.Admin.Forms
                 URLImage = txtURLImagen.Text,
                 Price = Decimal.Parse(txtPrecio.Text),
                 Stock = float.Parse(txtStockActual.Text),
+                Category = categories,
                 Business = businesses,
                 Qualifications = 0,
                 Score = 0,
                 Status = true,
                 LastModified = DateTime.Now,
                 OptionsList = null,
-                Recipe = recipes,
-
-
 
             };
-            int rows = RepositorioProductos.AltaProducto(producto);
+
+            if (cbxReceta.Checked)
+            {
+                if (cbReceta.Items.Count != 0)
+                {
+
+                    if (cbReceta.SelectedIndex != -1)
+                    {
+
+                        Recipes recipes = new Recipes
+                        {
+                            Id = Guid.Parse(cbReceta.SelectedValue.ToString())
+                        };
+                        producto.HasRecipe = true;
+                        producto.Recipe = recipes;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe seleccionar una receta o desmarcar el tilde de Receta");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay recetas cargadas en el sistema.");
+
+                }
+            }
+            else
+            {
+                producto.HasRecipe = false;
+                producto.Recipe = null;
+            }
+
+            Guid userId = Guid.Parse(cbUsuarios.SelectedValue.ToString());
+            int rows = RepositorioProductos.AltaProducto(producto, userId);
 
             if (rows > 0)
             {
                 MessageBox.Show("El registro se ha insertado correctamente");
             }
+            dgvProductos.Update();
+            dgvProductos.Refresh();
+        }
+
+        private void dgvProductos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+
+            //txtCodigo.Text = dgvClientes.CurrentRow.Cells[0].display.ToString();
+            //txtNombre.Text = dgvClientes.CurrentRow.Cells[1].display.ToString();
+            //txtDescripcion.Text = dgvClientes.CurrentRow.Cells[2].display.ToString();
+            //txt.Text = dgvClientes.CurrentRow.Cells[3].display.ToString();
+            //txt.Text = dgvClientes.CurrentRow.Cells[3].display.ToString();
+
+
+        }
+
+        private void txtNombreLegal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
